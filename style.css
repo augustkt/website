@@ -1527,7 +1527,9 @@ button {
   z-index: 4;
 }
 .features-how-to-use {
-  display: flex;
+  display: grid;
+  grid-template-columns: auto;  
+  grid-template-rows: repeat(2, auto);  
   align-items: flex-start;
   justify-content: flex-start;
   position: absolute;
@@ -1619,11 +1621,11 @@ button {
   z-index: 20;
 }
 .social-media {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(0, 1fr));  
+  grid-gap: 10.391px; 
   align-items: center;
   justify-content: flex-end;
-  flex-wrap: nowrap;
-  gap: 10.391px;
   position: absolute;
   width: 113px;
   height: 33.77px;
