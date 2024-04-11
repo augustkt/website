@@ -23,18 +23,22 @@ button {
 
 .main-container {
   position: relative;
-  width: 1107px;
-  height: 3740px;
+  /* Ширина та висота будуть залежати від розміру екрану */
+  width: 100%;
+  height: 100vh;
   margin: 0 auto;
   background: #fcfff4;
   overflow: hidden;
 }
+
 .flex-row-center {
-  position: relative;
-  width: 1039.038px;
-  height: 36px;
-  margin: 24px 0 0 44px;
-  z-index: 149;
+  @media (min-width: 768px) { /* Застосувати лише на екранах шириною 768px або більше */
+    position: relative;
+    width: 1039.038px;
+    height: 36px;
+    margin: 24px 0 0 44px;
+    z-index: 149;
+  }
 }
 .fluent-smartwatch-regular {
   position: absolute;
@@ -60,12 +64,14 @@ button {
   align-items: flex-start;
   flex-wrap: nowrap;
   gap: 16px;
-  position: absolute;
-  width: 451px;
-  height: 21px;
-  top: 15px;
-  right: 41.038px;
-  z-index: 141;
+  @media (min-width: 768px) { /* Застосувати лише на екранах шириною 768px або більше */
+    position: absolute;
+    width: 451px;
+    height: 21px;
+    top: 15px;
+    right: 41.038px;
+    z-index: 141;
+  }
 }
 .features {
   flex-shrink: 0;
